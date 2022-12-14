@@ -41,7 +41,7 @@ app.use("/api",paymentBrain)
 
 app.use(express.static(path.join(__dirname,"./client/build")))
 
-app.get("*",function(_,res){
+app.get("*",function(req,res){
     res.sendFile(
         path.join(__dirname,"./client/build/index.html"),
         function(err){
