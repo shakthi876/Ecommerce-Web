@@ -2,7 +2,8 @@ import { API } from "../../backend";
 
 //category api calls
 export const createCategory = (userId,token,category)=>{
-    console.log("cat",category)
+    console.log("API Call",API,category);
+   
     return fetch(`${API}/category/create/${userId}`,{
         method:"POST",
         //Header information
@@ -23,7 +24,7 @@ export const createCategory = (userId,token,category)=>{
 
 //Get all categories
 export const getAllCategories =()=>{
-    console.log("kk")
+   
     return fetch(`${API}/categories`,{
         method:"GET"
     }).then(
